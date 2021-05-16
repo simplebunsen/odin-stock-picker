@@ -1,3 +1,4 @@
+require "pp"
 def stock_picker(stocks_array)
 
   legal_profit_hash = {}
@@ -15,7 +16,10 @@ def stock_picker(stocks_array)
 
   end
 
+  pp legal_profit_hash
+
   max_profit = legal_profit_hash.max
+  pp max_profit
   max_profit_indices =  legal_profit_hash.key(max_profit)
 
   p max_profit << " at " << max_profit_indices
