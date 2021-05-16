@@ -16,11 +16,14 @@ def stock_picker(stocks_array)
 
   end
 
+#important part: above creates a hash that calcs start and end index to value differences in the original array 
+#if [1,4] => 12 is the largest difference in the stocks_array (which it is), below is supposed to pick it
+
   pp legal_profit_hash
 
-  max_profit = legal_profit_hash.max
+  max_profit = legal_profit_hash.max # this returns the [7,8] => 9 element instead of 12 
   pp max_profit
-  max_profit_indices =  legal_profit_hash.key(max_profit)
+  max_profit_indices =  legal_profit_hash.key(max_profit) #this obviously won't work then
 
   p max_profit << " at " << max_profit_indices
 
