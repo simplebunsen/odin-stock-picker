@@ -21,11 +21,11 @@ def stock_picker(stocks_array)
 
   pp legal_profit_hash
 
-  max_profit = legal_profit_hash.max # this returns the [7,8] => 9 element instead of 12 
+  max_profit = legal_profit_hash.values.max # this returns the [7,8] => 9 element instead of 12 
   pp max_profit
   max_profit_indices =  legal_profit_hash.key(max_profit) #this obviously won't work then
 
-  p max_profit << " at " << max_profit_indices
+  p max_profit.to_s << " at " << max_profit_indices.to_s
 
 
 
