@@ -9,7 +9,6 @@ def stock_picker(stocks_array)
 
     while(incrementing_index < stocks_array.length) do
       profit = stocks_array[incrementing_index] - current_price
-      #puts profit.to_s << " at " << current_index.to_s << ", " << incrementing_index.to_s
       legal_profit_hash[[current_index, incrementing_index]] = profit
       incrementing_index += 1
     end
@@ -24,4 +23,4 @@ def stock_picker(stocks_array)
   return max_profit_indices
 end
 
-p stock_picker([17,3,6,9,15,8,6,1,10])
+stock_picker([17,3,6,9,15,8,6,1,0])
